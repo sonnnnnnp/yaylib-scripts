@@ -1,4 +1,4 @@
-#
+# 2025/5/11
 # group_idsに入れたグループのユーザーの参加、脱退を検知してDiscordに通知する
 # 
 import time
