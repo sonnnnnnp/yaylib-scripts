@@ -1,17 +1,23 @@
 # 2024/2/15
-#
+# Yaylibを使ったDM傍受 Discord転送bot
+# 監視対象を自動で追加します
+
+
+# 必要な3つのcsvファイル
+# =========1=========
 # settings.csv (設定用のwebhook)
 #   1行目にlog出力用のwebhook
 #   2行目に監視対象外のDMを転送webhook
-#
+# =========2=========
 # target_list.csv (1行につき１人、監視したい対象のIDと転送先のwebhookを記載)
 #   35152,https://discord.com/api/webhooks/...
 #   4930835,https://discord.com/api/webhooks/...
-#
+# =========3=========
 # opponents_ids.csv（監視対象に届いたDMの送信相手を自動で追加される、最低でも１つはIDを入れとかないとエラーになるから注意w）
 # 93,808330622,129276...
-#
-#
+# ===================
+
+
 
 
 #

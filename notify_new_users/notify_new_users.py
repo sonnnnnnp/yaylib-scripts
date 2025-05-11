@@ -1,3 +1,6 @@
+#
+# group_idsに入れたグループのユーザーの参加、脱退を検知してDiscordに通知する
+# 
 import time
 import json
 import requests
