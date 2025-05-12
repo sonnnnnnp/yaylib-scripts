@@ -44,7 +44,7 @@ while True:
 
             from_id = users[-1]["user"]["id"]  # 次のページの起点にする
 
-            if len(users) < 20:  # 1ページの最大件数未満ならもうない
+            if len(users) < 20:  # 1回取得できる最大件数(20件)未満ならもうない
                 break
 
         for user in all_users:
