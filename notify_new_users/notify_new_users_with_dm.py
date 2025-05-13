@@ -48,8 +48,8 @@ def send_group_message(user_id, group_name, mode="welcome"):
     chat_room_id = msg_bot.create_private_chat(
         with_user_id=user_id, hima_chat=True
     ).data["room_id"]
-    # msg_bot.send_message(chat_room_id=chat_room_id, text=message)
-    print(message)
+    msg_bot.send_message(chat_room_id=chat_room_id, text=message)
+    # print(message)
 
 
 while True:
@@ -96,7 +96,7 @@ while True:
             for user_id in removed:
                 send_group_message(user_id, group_names[i], mode="goodbye")
                 send_discord_notification(user_id, group_names[i], "を脱退しました")
-                
+
     except Exception as e:
         send_discord_text(f"Error: {e}")
         print(f"Error: {e}")
