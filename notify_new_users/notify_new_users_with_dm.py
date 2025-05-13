@@ -96,11 +96,12 @@ while True:
             for user_id in removed:
                 send_group_message(user_id, group_names[i], mode="goodbye")
                 send_discord_notification(user_id, group_names[i], "を脱退しました")
-
-        with open("group_users.json", "w") as f:
-            json.dump(new_data, f, indent=4)
+                
     except Exception as e:
         send_discord_text(f"Error: {e}")
         print(f"Error: {e}")
+
+    with open("group_users.json", "w") as f:
+        json.dump(new_data, f, indent=4)
 
     time.sleep(60 * 5)  # 5分待機
