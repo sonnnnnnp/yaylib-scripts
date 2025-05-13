@@ -12,11 +12,12 @@ import requests
 import yaylib
 
 bot = yaylib.Client()
+
 group_ids = [186466, 360253, 360254]
 group_names = ["C/C++", "JavaScript", "Python"]
+webhook_url = "https://discord.com/api/webhooks/xxxxxxx/yyyyyyyy"
 
 def send_discord_text(text):
-    webhook_url = "https://discord.com/api/webhooks/xxxxxxx/yyyyyyyy"
     data = {"content": text}
     response = requests.post(webhook_url, json=data)
     if not response.status_code == 204:
