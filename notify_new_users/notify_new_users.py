@@ -9,9 +9,9 @@ import yaylib
 bot = yaylib.Client()
 group_ids = [186466, 360253, 360254]
 group_names = ['C/C++', 'JavaScript', 'Python']
+webhook_url = 'https://discord.com/api/webhooks/xxxxxxx/yyyyyyyy'
 
 def send_discord_notification(user_id, group_name, text):
-    webhook_url = 'https://discord.com/api/webhooks/xxxxxxx/yyyyyyyy'
     data = {
         'content': f'{group_name}{text}\nhttps://yay.space/user/{user_id}'
     }
