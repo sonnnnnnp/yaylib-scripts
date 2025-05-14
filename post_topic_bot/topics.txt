@@ -1,0 +1,3 @@
+【リスト内包表記の基本】\nPythonでは、ループと条件を1行で書ける「リスト内包表記」が便利！\n例えば、偶数の2乗をリストにするにはこう書きます：\nsquares = [x**2 for x in range(10) if x % 2 == 0]
+【enumerate() の活用】\nリストをループしながらインデックスも使いたい時は enumerate() が便利です：\nfor i, value in enumerate(['a', 'b', 'c']):\n    print(i, value)
+【変数の入れ替えが簡単！】\nPythonでは、aとbを入れ替えるのに一時変数はいりません：\na, b = 1, 2\nb, a = a, b
