@@ -16,7 +16,7 @@ DM（ダイレクトメッセージ）を傍受(盗聴)するためのモジュ�
 ### `online_log/`🟢
 指定したユーザーのonline、offline通知をDiscordに送信
 
-### `block_notifire/`🚫
+### `block_notifier/`🚫
 あなたをブロックしたユーザーを通知します
 
 ### `post_topic_bot/`🤖📝
