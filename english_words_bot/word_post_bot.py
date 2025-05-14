@@ -1,10 +1,10 @@
-import yaylib
+import random
+import time
 
 from bs4 import BeautifulSoup
 import requests
 
-import random
-import time
+import yaylib
 
 email = ""
 password = ""
