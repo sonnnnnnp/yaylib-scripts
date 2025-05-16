@@ -4,21 +4,22 @@ import time
 
 from bs4 import BeautifulSoup
 import requests
-
 import yaylib
 
-email = ""
-password = ""
+EMAIL = ""
+PASSWORD = ""
+FILENAME = "5000-words.txt"
 
-with open('5000-words.txt', 'r') as f:
-    lines = [line.strip() for line in f if line.strip()]
+def read_file(filename):
+    with open(filename, 'r', encoding='utf-8') as f:
+        return [line.strip() for line in f if line.strip()]
 
-def post(str):
+def post(text):
     while True:
         try:
             bot = yaylib.Client()
-            bot.login(email, password)
-            bot.create_post(str)
+            bot.login(EMAIL, PASSWORD)
+            bot.create_post(text)
             break
         except Exception as e:
             print(f"Error: {e}")
@@ -34,9 +35,11 @@ def get_meaning(word):
 
 
 if __name__ == "__main__":
+    # ファイルを読み込む
+    lines = read_file(FILENAME)
     # 1時間ごとに投稿
     while True:
         en_word = random.choice(lines)
         jp_meaning = get_meaning(en_word)
-        post(f"【 {en_word} 】\n{jp_meaning}")
+        print(f"【 {en_word} 】\n{jp_meaning}")
         time.sleep(3600)
