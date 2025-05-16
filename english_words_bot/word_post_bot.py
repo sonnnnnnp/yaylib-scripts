@@ -41,5 +41,5 @@ if __name__ == "__main__":
     while True:
         en_word = random.choice(lines)
         jp_meaning = get_meaning(en_word)
-        print(f"【 {en_word} 】\n{jp_meaning}")
+        post(f"【 {en_word} 】\n{jp_meaning}")
         time.sleep(3600)
