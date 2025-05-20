@@ -14,7 +14,7 @@ for i, line in enumerate(lines, start=1):
     topics.append({
         "id": i,
         "posted": False,
-        "description": line.replace('\\n', '\n')
+        "description": line.replace('\\n', '\n').replace('\\\n', '\\n')
     })
 
 with open(output_file, 'w', encoding='utf-8') as f:
