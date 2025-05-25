@@ -88,9 +88,9 @@ def main():
         usd = PriceFetcher.usd_jpy()
 
         image = ImageGenerator.generate_image(f'{btc}円', f'{usd}円')
-        image.save('/tmp/post.jpg')
+        image.save('tmp/post.jpg')
 
-        image_paths = ['/tmp/post.jpg']
+        image_paths = ['tmp/post.jpg']
         
         image_type = yaylib.ImageType.POST
         attachments = bot.upload_image(image_paths, image_type)
